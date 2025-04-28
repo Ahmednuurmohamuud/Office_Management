@@ -1,0 +1,6 @@
+django 
+django-allauth
+pillow 
+certifi
+django-widget-tweaks
+stripe

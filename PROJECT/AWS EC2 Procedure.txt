@@ -1,0 +1,57 @@
+Logged in to the AWS Account Created EC2 Instance.
+
+(New Ec2 Instance Connected from laptop commandprompt/gitbash by using following SSH command:) 
+
+ssh -i abdiinstnce.pem ec2-user@ec2-51-20-135-175.eu-north-1.compute.amazonaws.com
+
+
+sudo yum update -y
+sudo yum install python3 python3-pip git -y
+sudo yum install mysql mysql-devel -y
+
+
+git clone <your-repository-url>
+cd <your-project-folder>
+
+
+sudo yum update -y
+sudo yum install mariadb-server -y
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo mysql_secure_installation
+
+
+sudo mysql -u root -p
+
+
+CREATE DATABASE task_management_db;
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password'); 
+FLUSH PRIVILEGES; 
+Exit;
+
+Install dependencies from requirments.txt
+
+pip3 install -r requirements.txt
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+
+if database error comes while makemigrations:
+	sudo yum install gcc python3-devel mariadb-devel -y
+	pip3 install mysqlclient
+
+
+
+
+python3 manage.py runserver 0.0.0.0:8000
+
+http://51.20.135.175:8000
+
+
+python3 manage.py runserver 0.0.0.0:8000           #untill ec2tab open project will running
+nohup python3 manage.py runserver 0.0.0.0:8000 &   #even we close ec2 tab np always project will run
+                                                   #How to stop ....kill pid
+
+
+http to https ====>nginx
