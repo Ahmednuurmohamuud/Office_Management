@@ -8,3 +8,5 @@ gunicorn
 whitenoise
 mysqlclient
 python-dotenv
+dj-database-url
+psycopg2-binary
