@@ -1,6 +1,10 @@
-django 
+django
 django-allauth
-pillow 
+pillow
 certifi
 django-widget-tweaks
 stripe
+gunicorn
+whitenoise
+mysqlclient
+python-dotenv
